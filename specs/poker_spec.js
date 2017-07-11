@@ -7,7 +7,10 @@ describe ("test main page", function(){
     });
     
     var main_page = require('../pages/main_page.js');
-       
+    
+    //------------
+    // TESTCASE #1
+    //------------
     it ("test main page for layout", function(){
         
         var main_page = require('../pages/main_page.js');
@@ -24,6 +27,9 @@ describe ("test main page", function(){
         expect(is_google).toBe(true);
     });
     
+    //------------
+    // TESTCASE #2
+    //------------
     it ("test pressing “Play now” button", function(){
         
         var create_new_game_page = main_page.clickPlayNowButton();
@@ -39,7 +45,10 @@ describe ("test main page", function(){
         });
     
         var create_new_game_page = require('../pages/create_new_game_page.js');
-    
+        
+        //------------
+        // TESTCASE #3
+        //------------
         it ("test creating new game when all fields are filled", function() {
             
             create_new_game_page.enterUsername('Username');
@@ -58,6 +67,9 @@ describe ("test main page", function(){
             
         });
         
+        //------------
+        // TESTCASE #4
+        //------------
         it ("test creating new game when mandatory fields are empty/filled with spaces, part 1", function() {
             
             create_new_game_page.enterUsername('');
@@ -94,6 +106,9 @@ describe ("test main page", function(){
             
         });
         
+        //------------
+        // TESTCASE #5
+        //------------
         it ("test canceling game creation", function() {
             
             create_new_game_page.enterUsername('Uncertain user');
@@ -106,6 +121,9 @@ describe ("test main page", function(){
             
         });
         
+        //------------
+        // TESTCASE #6
+        //------------
         it ("test starting a new game round", function() {
             
             create_new_game_page.enterUsername('Username');
@@ -146,6 +164,9 @@ describe ("test main page", function(){
             
         });
         
+        //------------
+        // TESTCASE #7
+        //------------
         it ("test round cancel after story deleting from a Story list during a game round", function() {
             create_new_game_page.enterUsername('Username');
             create_new_game_page.enterGamename('New Game name');
